@@ -2,12 +2,14 @@
 
 /**
  * @ngdoc service
- * @name weatherApp.WeatherService
+ * @name weatherApp.weatherService
  * @description
- * # WeatherService
+ * # weatherService
  * Service in the weatherApp.
  */
 angular.module('weatherApp')
-  .service('WeatherService', function () {
-    // AngularJS will instantiate a singleton by calling "new" on this function
-  });
+    .service('weatherService', ['$http', 'apiService', function ($http, apiService) {
+        // AngularJS will instantiate a singleton by calling "new" on this function
+        
+
+  }]);

@@ -34,15 +34,15 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">weather</a>
+            <a class="navbar-brand" href="#/">Weather</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
+              <li class="active"><a href="#/">Dashboard</a></li>
+              <li><a ng-href="#/forecast">Forecast</a></li>
+              <li><button type="button" class="btn btn-primary" ng-click="addLocation()">Add</button></li>
             </ul>
           </div>
         </div>
@@ -53,11 +53,6 @@
     <div ng-view=""></div>
     </div>
 
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -89,12 +84,13 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/services/weatherservice.js"></script>
+        <script src="scripts/controllers/forecast.js"></script>
+        <script src="scripts/services/weather-service.js"></script>
         <script src="scripts/directives/current-location-weather-directive.js"></script>
         <script src="scripts/directives/saved-location-weather-directive.js"></script>
         <script src="scripts/directives/add-location-weather-directive.js"></script>
-        <script src="scripts/directives/forcastlocationweatherdirective.js"></script>
+        <script src="scripts/services/api-service.js"></script>
+        <script src="scripts/directives/location-forecast-directive.js"></script>
         <!-- endbuild -->
 </body>
 </html>
