@@ -11,6 +11,7 @@ angular.module('weatherApp')
     .service('weatherService', ['$http', 'apiService', function ($http, apiService) {
         // AngularJS will instantiate a singleton by calling "new" on this function
         var currentWeather = {};
+        this.selectedForecast = {};
         this.getCurrentLocationWeather = function () {
             return apiService.getCurrentLocation().then(function (data) {
                 var searchTerm = data.city + ", " + data.region + " " + data.postal + ", " + data.country;
@@ -35,5 +36,4 @@ angular.module('weatherApp')
                 location.forecast = data.query.results.channel.item.forecast;
             });
         };
-
   }]);

@@ -20,4 +20,8 @@ angular.module('weatherApp')
         });
         
         $scope.savedLocations = locationService.savedLocations;
+        
+        $scope.selectForecast = function (forecast) {
+            weatherService.selectedForecast = forecast;
+        }
 }]);

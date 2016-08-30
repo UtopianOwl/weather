@@ -8,10 +8,11 @@
  * Controller of the weatherApp
  */
 angular.module('weatherApp')
-  .controller('ForecastCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('ForecastCtrl', ['$scope', '$http', 'weatherService', 'locationService', function ($scope, $http, weatherService, locationService) {
+
+        $scope.getWiClass = function (weatherData) {
+            return "wi-yahoo-" + weatherData.code;
+        };
+      
+      $scope.forecastDays = weatherService.selectedForecast;
+}]);

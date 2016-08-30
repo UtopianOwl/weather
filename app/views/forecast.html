@@ -1,1 +1,8 @@
-<p>This is the forecast view.</p>
+<div class="row">
+   <div class="col-xs-4 col-xs-offset-4">
+       <a href="#/" class="return-link">Return</a>
+   </div>
+</div>
+<div class="row">
+    <location-forecast-directive ng-repeat="day in forecastDays track by $index"></location-forecast-directive>
+</div>
