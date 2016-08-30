@@ -124,6 +124,9 @@ body {
     font-size: 24px;
     margin-top: 10px;
 }
+.current-weather .weather-icon {
+    margin-top: 15px;
+}
 .saved-location-weather .tempurature {
     font-size: 18px;
     margin-top: 10px;
