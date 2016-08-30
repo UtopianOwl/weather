@@ -329,7 +329,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.dist %>',
-          src: ['*.html'],
+          src: ['.html', '{,/}*.html'],
           dest: '<%= yeoman.dist %>'
         }]
       }
@@ -340,7 +340,8 @@ module.exports = function (grunt) {
         options: {
           module: 'weatherApp',
           htmlmin: '<%= htmlmin.dist.options %>',
-          usemin: 'scripts/scripts.js'
+          usemin: 'scripts/scripts.js',
+          prefix: '/'
         },
         cwd: '<%= yeoman.app %>',
         src: 'views/{,*/}*.html',
@@ -379,6 +380,9 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '*.html',
+            '.htaccess',
+            '.html',
+            '{,/}.html',
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*'
           ]

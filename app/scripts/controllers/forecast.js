@@ -8,7 +8,7 @@
  * Controller of the weatherApp
  */
 angular.module('weatherApp')
-  .controller('ForecastCtrl', ['$scope', '$http', 'weatherService', 'locationService', function ($scope, $http, weatherService, locationService) {
+  .controller('ForecastCtrl', ['$scope', '$http', 'weatherService', function ($scope, $http, weatherService) {
 
         $scope.getWiClass = function (weatherData) {
             return "wi-yahoo-" + weatherData.code;
@@ -17,7 +17,7 @@ angular.module('weatherApp')
       $scope.forecastDays = weatherService.selectedForecast;
       
       
-      var formatDate = function(element, index, array) {
+      var formatDate = function(element) {
           var dateSplitArray = element.date.split(" ");
           var formattedDateString = dateSplitArray[2] + "-";
           switch (dateSplitArray[1]) {
@@ -57,10 +57,10 @@ angular.module('weatherApp')
               case "Dec":
                   formattedDateString += "12-";
                   break;
-          };
+          }
           formattedDateString += dateSplitArray[0];
           var date = moment(formattedDateString).format('MMM Do');
-          var day = moment(formattedDateString).format('ddd')
+          var day = moment(formattedDateString).format('ddd');
           element.date = date;
           element.day = day;
       };

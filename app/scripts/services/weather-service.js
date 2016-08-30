@@ -31,7 +31,7 @@ angular.module('weatherApp')
         this.getLocationWeather = function (location) {
            return apiService.getWeatherData(location.woeid)
                .then(function (data) {
-                location.location = data.query.results.channel.location
+                location.location = data.query.results.channel.location;
                 location.condition = data.query.results.channel.item.condition;
                 location.forecast = data.query.results.channel.item.forecast;
             });

@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('weatherApp')
     .controller('modalCtrl', ['$uibModal', '$log', function ($uibModal, $log) {
 
