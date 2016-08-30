@@ -18,6 +18,8 @@ angular
     'ngTouch',
     'ui.bootstrap'
   ])
+//Angular router to handle different views
+//Two primary views (main & forecast) and 404
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

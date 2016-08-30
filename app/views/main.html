@@ -1,2 +1,5 @@
+<!-- Custom directive to display current weather data as well as 'add' button -->
 <current-location-weather-directive></current-location-weather-directive>
+
+<!-- Custom directive to display weather data for a saved location. Repeated for each saved location-->
 <saved-location-weather-directive ng-repeat="location in savedLocations track by $index"></saved-location-weather-directive>
