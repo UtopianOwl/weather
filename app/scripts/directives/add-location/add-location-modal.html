@@ -1,0 +1,46 @@
+<div class="modal-header">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3 class="modal-title" id="modal-title">Select a Location:</h3>
+        </div>
+    </div>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="row">
+        <div id="search-locations-bar">
+            <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                <div class="input-group">
+                    <input type="text" ng-model="selectedLocation" placeholder="Search for location..." uib-typeahead="address for address in getLocation($viewValue)" typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control">
+                    <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+                    <div ng-show="noResults">
+                        <i class="glyphicon glyphicon-remove"></i> No Results Found
+                    </div>
+                    <span class="input-group-addon glyphicon glyphicon-search">
+                </span>
+                </div>
+                <!-- /input-group -->
+            </div>
+            <!-- /.col-lg-6 -->
+        </div>
+    </div>
+    <!-- /.row -->
+</div>
+<div class="modal-footer">
+    <div class="row">
+        <div id="modal-buttons">
+            <div class="col-sm-6">
+                <button class="btn btn-lg btn-primary center-block" ng-click="$ctrl.ok(selectedLocation)">
+                    <span class="glyphicon glyphicon-plus" ng-click="$ctrl.cancel()"></span>
+                </button>
+            </div>
+            <!-- /.col-sm-6 -->
+            <div class="col-sm-6">
+                <button class="btn btn-lg btn-danger center-block">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </div>
+            <!-- /.col-sm-6 -->
+        </div>
+    </div>
+    <!-- /.row -->
+</div>

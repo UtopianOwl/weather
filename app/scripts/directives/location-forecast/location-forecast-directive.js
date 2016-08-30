@@ -9,10 +9,8 @@
 angular.module('weatherApp')
   .directive('locationForecastDirective', function () {
     return {
-      template: '<div></div>',
+      templateUrl: 'scripts/directives/location-forecast/location-forecast-directive.html',
       restrict: 'E',
-      link: function postLink(scope, element, attrs) {
-        element.text('this is the locationForecastDirective directive');
-      }
+      replace: true
     };
   });

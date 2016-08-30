@@ -9,10 +9,8 @@
 angular.module('weatherApp')
   .directive('currentLocationWeatherDirective', function () {
     return {
-      template: '<div></div>',
+      templateUrl: 'scripts/directives/current-location/current-location-weather-directive.html',
       restrict: 'E',
-      link: function postLink(scope, element, attrs) {
-        element.text('this is the currentLocationWeatherDirective directive');
-      }
+      replace: true
     };
   });

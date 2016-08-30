@@ -81,3 +81,17 @@ body {
     border-bottom: 0;
   }
 }
+.current-weather * {
+    color: #26E8CD;
+}
+.current-weather .weather-icon {
+    font-size: 144px;
+}
+
+.saved-location-weather * {
+    color: #2381E8;
+}
+
+.saved-location-weather .weather-icon {
+    font-size: 72px;
+}
