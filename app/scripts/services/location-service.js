@@ -25,10 +25,10 @@ angular.module('weatherApp')
     };
       
     this.deleteLocation = function (location) {
-        function matchWoeid(element, index, array) {
-            return element.woeid === location.woeid
+        function matchWoeid(element) {
+            return element.woeid === location.woeid;
         }
         var index = self.savedLocations.findIndex(matchWoeid);
         self.savedLocations.splice(index, 1);
-    }
+    };
   }]);

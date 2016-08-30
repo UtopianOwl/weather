@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('weatherApp')
     .controller('modalCtrl', ['$uibModal', '$log', function ($uibModal, $log) {
 
@@ -9,7 +11,7 @@ angular.module('weatherApp')
                 animation: true,
                 ariaLabelledBy: 'modal-title',
                 ariaDescribedBy: 'modal-body',
-                templateUrl: 'scripts/directives/add-location/add-location-modal.html',
+                templateUrl: 'scripts/directives/add-location-modal.html',
                 controller: 'ModalInstanceCtrl',
                 controllerAs: '$ctrl',
                 size: size

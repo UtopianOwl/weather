@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Directive: addLocationWeatherDirective', function () {
+describe('Directive: addLocationModal', function () {
 
   // load the directive's module
   beforeEach(module('weatherApp'));
@@ -13,8 +13,8 @@ describe('Directive: addLocationWeatherDirective', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<add-location-weather-directive></add-location-weather-directive>');
+    element = angular.element('<add-location-modal></add-location-modal>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the addLocationWeatherDirective directive');
+    expect(element.text()).toBe('this is the addLocationModal directive');
   }));
 });

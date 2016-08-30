@@ -23,5 +23,5 @@ angular.module('weatherApp')
         
         $scope.selectForecast = function (forecast) {
             weatherService.selectedForecast = forecast;
-        }
+        };
 }]);
