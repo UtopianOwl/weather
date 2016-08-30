@@ -16,7 +16,6 @@ angular.module('weatherApp')
             });
 
             modalInstance.result.then(function (selectedItem) {
-//                console.log(selectedItem);
             }, function () {
                 $log.info('Modal dismissed at: ' + new Date());
             });

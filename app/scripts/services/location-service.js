@@ -21,7 +21,6 @@ angular.module('weatherApp')
             newLocation.condition = data.query.results.channel.item.condition;
             newLocation.forecast = data.query.results.channel.item.forecast;
             self.savedLocations.push(newLocation);
-            console.log(self.savedLocations);
         });
     };
       

@@ -1,4 +1,4 @@
-<div class="col-xs-1 forecast-day" ng-class="{ 'col-xs-1': $first }">
+<div class="col-xs-4 col-sm-2 col-md-1 forecast-day" ng-class="{ 'col-xs-offset-2': $even, 'col-sm-offset-0': $index === 2 || $index === 4 || $index === 6 || $index === 8, 'col-sm-offset-1': $first || $index === 5, 'col-md-offset-0': $index === 5 }">
     <div class="row">
         <p class="day">{{ day.day }}</p>
     </div>

@@ -14,7 +14,6 @@ angular.module('weatherApp')
         this.getCurrentLocation = function () {
             return $http.get('http://ipinfo.io/json')
                 .then(function (response) {
-                    console.log(response.data);
                     return response.data;
                 }, function (response) {
                     alert("Error " + response.status + ": " + response.statusText);
@@ -23,10 +22,8 @@ angular.module('weatherApp')
         // YQL geo REST endpoint. GET possible WOEIDs associated with search term
         this.queryPlaces = function (searchTerm) {
             var queryTerm = encodeURIComponent(searchTerm);
-            console.log(queryTerm);
             return $http.get('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20geo.places%20where%20text%3D%22' + queryTerm + '%22&format=json&diagnostics=true&callback=')
                 .then(function (response) {
-                    console.log(response.data);
                     return response.data;
                 }, function (response) {
                     alert("Error " + response.status + ": " + response.statusText);
