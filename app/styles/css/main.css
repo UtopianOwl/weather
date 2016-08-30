@@ -60,6 +60,9 @@ body {
     .forecast-day {
         margin-top: 20px;
     }
+    .current-weather .btn-add {
+        margin-top: 20px;
+    }
 }
 @media screen and (min-width: 544px) {
     .forecast-day .weather-icon {
@@ -68,18 +71,27 @@ body {
     .forecast-day {
         margin-top: 20px;
     }
+    .current-weather .btn-add {
+        margin-top: 20px;
+    }
 }
 @media screen and (min-width: 768px) {
     .forecast-day .weather-icon {
+        padding-top: 5px;
         font-size: 48px;
     }
     .forecast-day {
         margin-top: 25px;
     }
+    .current-weather .btn-add {
+        margin-top: 0;
+        float: right;
+    }
 }
 @media screen and (min-width: 992px) {
     .forecast-day .weather-icon {
-        font-size: 36px;
+        padding-top: 10px;
+        font-size: 30px;
     }
     .forecast-day {
         margin-top: 30px;
@@ -87,6 +99,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
     .forecast-day .weather-icon {
+        padding-top: 10px;
         font-size: 36px;
     }
     .forecast-day {
@@ -124,13 +137,18 @@ body {
 }
 /* button formatting */
 .btn-add {
-    margin-top: 20px;
     color: #26E8CD;
     border-color: #26E8CD;
     background-color: white;
     border-width: thick;
 }
 .btn-add *:hover {
+    color: #2381E8;
+    border-color: #2381E8;
+    background-color: white;
+    border-width: thick;
+}
+.btn-add:hover {
     color: #2381E8;
     border-color: #2381E8;
     background-color: white;
@@ -161,15 +179,15 @@ body {
   line-height: 1.33;
   border-radius: 35px;
 }
-@media screen and (min-width: 992px) {
-    .current-weather .btn-add {
-        margin-top: 0;
-        float: right;
-    }
-}
+
 /* search-bar formatting */
 .search-bar {
     font-size: 36px;
     height: 48px;
 }
 
+/* Modal formatting */
+.modal-footer {
+    padding-bottom: 0px;
+    border-top: none;
+}
