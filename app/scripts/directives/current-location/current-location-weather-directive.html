@@ -1,0 +1,24 @@
+<div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 current-weather">
+    <div class="row">
+        <div class="col-xs-7">
+            <i class="weather-icon wi" ng-class="getWiClass(currentWeather.condition)"></i>
+        </div>
+        <div class="col-xs-5">
+            <p class="tempurature">{{ currentWeather.condition.temp }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 center-block">
+            <p class="location-region"> {{ currentWeather.location.city }}, {{ currentWeather.location.region }}</p> 
+            <p class="location-country">{{ currentWeather.location.country }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 center-block">
+            <a href="#forecast" class="forecast-link" ng-click="selectForecast(currentWeather.forecast)">Forecast</a>
+        </div>
+    </div>
+     <div ng-controller="modalCtrl as $ctrl">
+        <button type="button" class="btn btn-xl btn-circle btn-add" ng-click="$ctrl.open('lg')"><span class="glyphicon glyphicon-plus"></span></button>
+    </div>
+</div>
