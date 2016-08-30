@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -24,12 +25,15 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/forecast', {
+        templateUrl: 'views/forecast.html',
+        controller: 'ForecastCtrl',
+        controllerAs: 'forecast'
+      })
+      .when('/404', {
+        templateUrl: '404.html'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/404'
       });
   });

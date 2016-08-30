@@ -9,10 +9,8 @@
 angular.module('weatherApp')
   .directive('savedLocationWeatherDirective', function () {
     return {
-      template: '<div></div>',
+      templateUrl: 'scripts/directives/saved-location/saved-location-weather-directive.html',
       restrict: 'E',
-      link: function postLink(scope, element, attrs) {
-        element.text('this is the savedLocationWeatherDirective directive');
-      }
+      replace: true
     };
   });

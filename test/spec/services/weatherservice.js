@@ -1,18 +1,18 @@
 'use strict';
 
-describe('Service: WeatherService', function () {
+describe('Service: weatherService', function () {
 
   // load the service's module
   beforeEach(module('weatherApp'));
 
   // instantiate service
-  var WeatherService;
-  beforeEach(inject(function (_WeatherService_) {
-    WeatherService = _WeatherService_;
+  var weatherService;
+  beforeEach(inject(function (_weatherService_) {
+    weatherService = _weatherService_;
   }));
 
   it('should do something', function () {
-    expect(!!WeatherService).toBe(true);
+    expect(!!weatherService).toBe(true);
   });
 
 });
