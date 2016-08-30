@@ -9,12 +9,13 @@
     </div>
     <div class="row">
         <div class="col-xs-12 center-block">
-            <p class="location-description"> {{ location.location.city }} {{ location.location.region }} {{ location.location.country }}</p>
+            <p class="location-region"> {{ location.location.city }}, {{ location.location.region }}</p> 
+            <p class="location-country">{{ location.location.country }}</p>
         </div>
     </div>
     <div class="row">
         <div class="col-xs-12 center-block">
-            <a href="#forecast" class="forecast-link center-block" ng-click="location.forecast">Forecast</a>
+            <a href="#forecast" class="forecast-link" ng-click="selectForecast(location.forecast)">Forecast</a>
         </div>
     </div>
 </div>

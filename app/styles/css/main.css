@@ -1,15 +1,66 @@
+/* Google Fonts */
+@import 'https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&subset=latin-ext';
+
 /* All the stuff I made */
+body {
+    font-family: 'Dosis', sans-serif;
+}
+/* Formatting for links */
+.forecast-link, .return-link {
+    color: #26E8CD;
+    border: 2px solid #26E8CD;
+    border-radius: 50px;
+    padding: 5px
+}
+.current-weather .forecast-link:hover, .return-link:hover {
+    border-color: #2381E8;
+    color: #2381E8;
+    text-decoration: none;
+    
+}
+.saved-location-weather .forecast-link:hover {
+    border-color: #26E8CD;
+    color: #26E8CD;
+    text-decoration: none;
+}
+
+/* Weather & Icon formatting */
 .current-weather * {
+    text-align: center;
     color: #26E8CD;
 }
 .current-weather .weather-icon {
     font-size: 144px;
 }
-
 .saved-location-weather * {
+    text-align: center;
+    color: #2381E8;
+    border-color: #2381E8;
+}
+.forecast-day .weather-icon {
+    font-size: 36px;
+}
+.forecast-day .tempurature, .forecast-day .weather-icon {
+    text-align: center;
+    color: #26E8CD;
+}
+.forecast-day .day, .forecast-day .date {
+    text-align: center;
     color: #2381E8;
 }
-
+/* button formatting */
+.btn-add {
+    color: #26E8CD;
+    border-color: #26E8CD;
+    background-color: white;
+    border-width: thick;
+}
+.btn-add *:hover {
+    color: #2381E8;
+    border-color: #2381E8;
+    background-color: white;
+    border-width: thick;
+}
 .saved-location-weather .weather-icon {
     font-size: 72px;
 }
@@ -38,7 +89,7 @@
   line-height: 1.33;
   border-radius: 35px;
 }
-
+/* search-bar formatting */
 .search-bar {
     font-size: 36px;
     height: 48px;
